@@ -28,5 +28,9 @@ body {
 }
 
 .homepage {
-  margin-bottom: 60px;
+  margin: 60px 0;
+
+  @include for-tablet-landscape-up {
+    margin: 120px 0;
+  }
 }

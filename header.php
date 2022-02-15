@@ -12,6 +12,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div class="menu-background"></div>
 <header class="header">
     <div class="topbar">
         <div class="container large-container">
@@ -46,7 +47,7 @@
     <div class="container">
         <div class="header__grid">
             <div class="header__hamburger">
-                <i class="fas fa-bars" aria-label="Menu" aria-expanded="false"></i>
+                <i id="hamburger" class="fas fa-bars" aria-label="Menu" aria-expanded="false"></i>
             </div>
             <div class="header__logo">
                 <?php $header = get_field('header', 'options');
@@ -61,7 +62,8 @@
                 <?php $profile = $header['profile'];
                     $wishlist = $header['wishlist'];
                     $cart = $header['cart']; ?>
-                <i id="header__menu__search" class="fas fa-search pointer" aria-label="Szukaj" aria-expanded="false"></i>
+                <i id="header__menu__search" class="fas fa-search pointer" aria-label="Szukaj"
+                   aria-expanded="false"></i>
                 <a href='<?= $profile['url']; ?>' class="header__menu__profile" aria-label="Twój profil"><i
                         class="fas fa-user"></i></a>
                 <a href='<?= $wishlist['url']; ?>' class="header__menu__wishlist" aria-label="Lista życzeń"><i
@@ -73,6 +75,17 @@
         <div class="header__searchbar">
             <?= do_shortcode('[fibosearch]'); ?>
         </div>
+        <nav id="site-navigation" class="header__navigation">
+            <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'menu-1',
+                        'menu_id' => 'primary-menu',
+                        'menu_class' => 'primary-menu',
+                    )
+                );
+            ?>
+        </nav>
     </div>
 </header>
 <main>
