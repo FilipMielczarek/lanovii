@@ -1,3 +1,3 @@
 import "./styles/main.scss";
-
-import "./js/toggle-searchbar"
+import "./js/accordion";
+import "./js/toggle-searchbar";

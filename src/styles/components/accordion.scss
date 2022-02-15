@@ -1,0 +1,58 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.accordion {
+  background-color: transparent;
+  color: $text-color-1;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+
+  @include for-tablet-portrait-up {
+    cursor: initial;
+  }
+
+  &:after {
+    content: '\002B';
+    color: $default-background;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+}
+
+.active:after {
+  content: "\2212";
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+}
+
+.panel {
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+  @include for-tablet-portrait-up {
+    max-height: 100%;
+  }
+
+  a,
+  p,
+  span {
+    font-size: 1.2rem;
+    line-height: 2.8rem;
+    color: $default-background;
+  }
+}
