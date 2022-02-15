@@ -6,14 +6,23 @@
 body {
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: #123;
-  color: #fff;
+  background-color: $default-background;
+  color: $default-color;
 }
 
 // Adjust container settings as you wish
 .container {
   width: 100%;
-  max-width: 1260px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 14px;
+  padding: 0 15px;
+}
+
+.large-container {
+  @include for-tablet-landscape-up {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
 }

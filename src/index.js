@@ -1,3 +1,3 @@
 import "./styles/main.scss";
 
-import "./js/hello"
+import "./js/toggle-searchbar"

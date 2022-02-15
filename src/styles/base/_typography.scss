@@ -1,70 +1,83 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
+.h5,
 h6,
+.h6,
 p {
   margin: 0;
+  font-weight: 400;
 }
 
-h1 {
-  font-size: 4.5rem;
-  line-height: 6.7rem;
+h1,
+.h1 {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
 }
 
-h2 {
-  font-size: 4rem;
-  line-height: 6rem;
+h2,
+.h2 {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
 }
 
-h3 {
-  font-size: 3.5rem;
-  line-height: 5.2rem;
+h3,
+.h3 {
+  font-size: 2rem;
+  line-height: 1.6rem;
 }
 
-h4 {
+h4,
+.h4 {
   font-size: 3rem;
   line-height: 4.5rem;
 }
 
-h5 {
-  font-size: 2.5rem;
-  line-height: 3.7rem;
+h5,
+.h5 {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
 }
 
-h6 {
+h6,
+.h6 {
   font-size: 2rem;
   line-height: 3rem;
 }
 
 @include for-phone-only {
   h1 {
-    font-size: (4.5 * 0.8) * 1rem;
-    line-height: (6.7 * 0.8) * 1rem;
+    font-size: (2.8 * 0.8) * 1rem;
+    line-height: (3.6 * 0.8) * 1rem;
   }
 
   h2 {
-    font-size: (4 * 0.8) * 1rem;
-    line-height: (6 * 0.8) * 1rem;
+    font-size: (1.8 * 0.8) * 1rem;
+    line-height: (3.2 * 0.8) * 1rem;
   }
 
   h3 {
-    font-size: (3.5 * 0.8) * 1rem;
-    line-height: (5.2 * 0.8) * 1rem;
+    font-size: (2 * 0.8) * 1rem;
+    line-height: (1.6 * 0.8) * 1rem;
   }
 
   h4 {
@@ -73,8 +86,8 @@ h6 {
   }
 
   h5 {
-    font-size: (2.5 * 0.8) * 1rem;
-    line-height: (3.7 * 0.8) * 1rem;
+    font-size: (1.5 * 0.8) * 1rem;
+    line-height: (2.2 * 0.8) * 1rem;
   }
 
   h6 {
@@ -92,4 +105,14 @@ a {
   font-size: 1.4rem;
   line-height: 2.1rem;
   text-decoration: none;
+  color: $default-color;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.p-14 {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
 }

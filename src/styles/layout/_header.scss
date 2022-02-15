@@ -1,1 +1,111 @@
-// Example layouts:  navigation, header, sidebar
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.topbar {
+  background-color: $default-color;
+  color: $default-background;
+  padding: 10px 0;
+
+  a {
+    color: $default-background;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__flex {
+    @include for-tablet-portrait-up {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @include for-tablet-landscape-up {
+      gap: 40px;
+    }
+  }
+
+  &__opening-hours {
+    @include for-tablet-portrait-up {
+      text-align: right;
+    }
+  }
+
+  &__opening-hours,
+  &__payments {
+    display: none;
+
+    @include for-tablet-portrait-up {
+      display: block;
+    }
+  }
+
+}
+
+.header {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  &__hamburger {
+    @include for-tablet-landscape-up {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__hamburger,
+  &__menu {
+    i {
+      font-size: 20px;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 50px;
+      object-fit: cover;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 15px;
+
+    &__wishlist,
+    i.fa-search {
+      display: none;
+
+      @include for-tablet-portrait-up {
+        display: block;
+      }
+    }
+  }
+
+  &__searchbar {
+    @include for-tablet-portrait-up {
+      margin-top: -60px;
+      margin-bottom: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s;
+    }
+  }
+
+  &__searchbar--active {
+    @include for-tablet-portrait-up {
+      margin-top: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
