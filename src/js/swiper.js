@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
+import 'swiper/css/navigation'
 
 const homepageSwiper = document.querySelector(".banner__swiper");
 
@@ -9,5 +10,26 @@ if (homepageSwiper) {
     autoplay: {
       delay: 5000,
     },
+  });
+}
+
+
+const inspirationsSwiper = document.querySelector(".inspirations__swiper");
+
+if (inspirationsSwiper) {
+  const swiper = new Swiper(".inspirations__swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesOffsetBefore: 75,
+        slidesOffsetAfter: 75,
+      },
+    }
   });
 }

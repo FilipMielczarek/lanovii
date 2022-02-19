@@ -9,7 +9,7 @@
                 $second_category_name = $second_category['category_name'];
                 $third_category_name = $third_category['category_name']; ?>
             <button id="category-pick__choices__first-choice"><?= $first_category_name; ?></button>
-            <button id="category-pick__choices__second-choice"><?= $second_category_name; ?></button>
+            <button id="category-pick__choices__second-choice" class="active-button"><?= $second_category_name; ?></button>
             <button id="category-pick__choices__third-choice"><?= $third_category_name; ?></button>
         </div>
         <?php if ($first_category): ?>

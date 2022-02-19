@@ -98,7 +98,62 @@
   }
 }
 
-#category-pick__products__second-choice,
+#category-pick__products__first-choice,
 #category-pick__products__third-choice {
   display: none;
+}
+
+.inspirations {
+  &__wrapper {
+    padding: 30px;
+    text-align: center;
+    background-color: $black;
+  }
+
+  &__heading h2 {
+    margin-bottom: 10px;
+    color: $primary-color-1;
+  }
+
+  &__subheading  {
+    margin-bottom: 30px;
+    h2 {
+    color: $white;
+    }
+  }
+
+  &__swiper {
+    &__slide {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+
+      img {
+        max-width: 500px;
+        height: auto;
+        object-fit: cover;
+      }
+
+      &__button {
+        margin: 15px 0 7px 0;
+
+        a {
+          padding: 10px 40px;
+          background-color: $primary-color-1;
+          color: $white;
+          font-weight: 600;
+          text-transform: uppercase;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    &__next,
+    &__prev {
+      &::after {
+        color: $primary-color-1;
+      }
+    }
+  }
 }
