@@ -50,7 +50,7 @@
             </div>
             <div class="header__logo">
                 <?php $logo = $header['logo']; ?>
-                <a href='<?php home_url(); ?>' aria-label="Strona główna">
+                <a href='<?= get_home_url(); ?>' aria-label="Strona główna">
                     <?php if (!empty($logo)): ?>
                         <img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"/>
                     <?php endif; ?>
