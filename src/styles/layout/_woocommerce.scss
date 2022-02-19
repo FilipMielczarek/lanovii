@@ -1,0 +1,23 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.category-pick__products {
+  .woocommerce {
+    .products {
+      @include for-tablet-portrait-up {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.woocommerce ul.products li.product {
+  .price {
+    color: $primary-color-1;
+  }
+
+  .onsale {
+    background-color: $primary-color-1;
+  }
+}

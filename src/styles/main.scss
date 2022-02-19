@@ -1,10 +1,11 @@
 @use "./base/typography";
 
-@use "components/accordion";
+@use "./components/accordion";
 @use "./components/buttons";
 
-@use "layout/footer";
+@use "./layout/footer";
 @use "./layout/header";
+@use "./layout/woocommerce";
 
 @use "./pages/homepage";
 

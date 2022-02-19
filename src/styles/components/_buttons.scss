@@ -1,3 +1,11 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 .pointer {
   cursor: pointer;
+}
+
+.active-button {
+  background-color: $primary-color-1 !important;
+  color: $white !important;
 }

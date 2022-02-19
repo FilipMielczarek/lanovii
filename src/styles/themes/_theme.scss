@@ -46,11 +46,7 @@ main {
 }
 
 .small-margin {
-  margin-top: 20px;
-
-  @include for-tablet-portrait-up {
-    margin-top: 40px;
-  }
+  margin-top: 40px;
 }
 
 // Margins

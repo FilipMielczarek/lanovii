@@ -28,3 +28,77 @@
     object-fit: cover;
   }
 }
+
+.featured-categories {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include for-tablet-portrait-up {
+      flex-direction: row;
+    }
+  }
+
+  &__single {
+    display: flex;
+    flex: 1;
+  }
+
+  &__single a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.category-pick {
+  &__choices {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+      width: 100%;
+      padding: 15px 30px;
+      background-color: $white;
+      color: $primary-color-1;
+      border: 2px solid $primary-color-1;
+      border-radius: 8px;
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all .3s;
+      cursor: pointer;
+
+      @include for-tablet-portrait-up {
+        width: auto;
+      }
+
+      &:hover {
+        background-color: $primary-color-1;
+        color: $white;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+
+        @include for-tablet-portrait-up {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+#category-pick__products__second-choice,
+#category-pick__products__third-choice {
+  display: none;
+}
