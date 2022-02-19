@@ -110,15 +110,16 @@
     background-color: $black;
   }
 
-  &__heading h2 {
+  &__heading h1 {
     margin-bottom: 10px;
     color: $primary-color-1;
   }
 
-  &__subheading  {
+  &__subheading {
     margin-bottom: 30px;
+
     h2 {
-    color: $white;
+      color: $white;
     }
   }
 
@@ -155,5 +156,103 @@
         color: $primary-color-1;
       }
     }
+  }
+}
+
+.new-arrivals {
+  &__heading {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+}
+
+.newsletter {
+  &__wrapper {
+    @include for-tablet-portrait-up {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__sign-up {
+    @include for-tablet-portrait-up {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 2;
+    }
+
+    &__heading,
+    &__subheading {
+      max-width: 500px;
+      text-align: center;
+    }
+
+    &__heading {
+      margin-bottom: 5px;
+
+      h3 {
+        color: $primary-color-1;
+      }
+    }
+
+    &__subheading {
+      margin-bottom: 15px;
+
+      h3 {
+        color: $primary-color-2;
+      }
+    }
+
+    &__form {
+      max-width: 480px;
+
+      &__input {
+        display: block;
+        width: 100%;
+        border: 1px solid $primary-color-2;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      &__submit {
+        margin-bottom: 10px;
+
+        &__button {
+          display: block;
+          width: 100%;
+          border: none;
+          background-color: $primary-color-1;
+          color: $white;
+          text-transform: uppercase;
+          padding: 11px 0;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    display: none;
+
+    img {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @include for-tablet-portrait-up {
+      display: flex;
+      flex: 1;
+    }
+  }
+}
+
+.about-us {
+  &__heading h4 {
+    color: $primary-color-1;
   }
 }

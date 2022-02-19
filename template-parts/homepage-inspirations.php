@@ -4,7 +4,7 @@
             <?php $homepage_inspirations = get_field('homepage_inspirations'); ?>
             <div class="inspirations__heading">
                 <?php $first_heading = $homepage_inspirations['first_heading']; ?>
-                <h2><?= $first_heading; ?></h2>
+                <h1 class="h2"><?= $first_heading; ?></h1>
             </div>
             <div class="inspirations__subheading">
                 <?php $second_heading = $homepage_inspirations['second_heading']; ?>
