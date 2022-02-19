@@ -8,10 +8,21 @@
 
   &__flex {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 15px;
+
+    @include for-tablet-portrait-up {
+      justify-content: flex-start;
+    }
+
+    & > * {
+      flex: 1;
+
+      @include for-tablet-portrait-up {
+        flex: none;
+      }
+    }
   }
 }
 

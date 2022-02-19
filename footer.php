@@ -10,7 +10,7 @@
      */
 ?>
 </main>
-<footer class="footer">
+<footer class="footer standard-margins">
     <div class="container">
         <div class="footer__wrapper">
             <?php $footer_sections = get_field('footer_sections', 'options'); ?>

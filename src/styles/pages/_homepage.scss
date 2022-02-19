@@ -1,1 +1,30 @@
-// Example pages: homepage, about, contact us
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.banner {
+  margin-top: 20px;
+
+  @include for-tablet-portrait-up {
+    margin-top: 40px;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-top: 130px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    max-height: 700px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

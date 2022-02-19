@@ -22,3 +22,36 @@ body {
     margin: 120px 0;
   }
 }
+
+main {
+  @include for-tablet-landscape-up {
+    margin-top: 70px;
+  }
+}
+
+.standard-margins {
+  margin-top: 20px;
+
+  @include for-tablet-portrait-up {
+    margin-top: 40px;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-top: 60px;
+  }
+
+  @include for-desktop-up {
+    margin-top: 80px;
+  }
+}
+
+.small-margin {
+  margin-top: 20px;
+
+  @include for-tablet-portrait-up {
+    margin-top: 40px;
+  }
+}
+
+// Margins
+// 20 > 40 > 60
