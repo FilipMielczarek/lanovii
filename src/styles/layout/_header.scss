@@ -28,9 +28,22 @@
   }
 
   &__hamburger {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
     @include for-tablet-landscape-up {
-      opacity: 0;
-      visibility: hidden;
+      #hamburger {
+        display: none;
+      }
+    }
+  }
+
+  &__social {
+    display: none;
+
+    @include for-tablet-landscape-up {
+      display: flex;
     }
   }
 

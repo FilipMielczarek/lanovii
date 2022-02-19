@@ -34,12 +34,22 @@
 
     <div class="container">
         <div class="header__grid">
+            <?php $header = get_field('header', 'options');
+                $facebook = $header['facebook'];
+                $instagram = $header['instagram'];
+            ?>
             <div class="header__hamburger">
                 <i id="hamburger" class="fas fa-bars" aria-label="Menu" aria-expanded="false"></i>
+                <a href='<?= $instagram['url']; ?>' aria-label="Instagram La`Novii" rel="noopener noreferrer"
+                   class="header__social">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href='<?= $facebook['url']; ?>' aria-label="Facebook La`Novii" rel="noopener noreferrer" class="header__social">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
             </div>
             <div class="header__logo">
-                <?php $header = get_field('header', 'options');
-                    $logo = $header['logo']; ?>
+                <?php $logo = $header['logo']; ?>
                 <a href='<?php home_url(); ?>' aria-label="Strona główna">
                     <?php if (!empty($logo)): ?>
                         <img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"/>
@@ -56,8 +66,9 @@
                         class="fas fa-user"></i></a>
                 <a href='<?= $wishlist['url']; ?>' class="header__menu__wishlist" aria-label="Lista życzeń"><i
                         class="fas fa-heart"></i></a>
-                <a href='<?= $cart['url']; ?>' class="header__menu__cart" aria-label="Koszyk"><i
-                        class="fas fa-shopping-bag"></i></a>
+                <a href='<?= $cart['url']; ?>' class="header__menu__cart" aria-label="Koszyk">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
             </div>
         </div>
         <div class="header__searchbar">
