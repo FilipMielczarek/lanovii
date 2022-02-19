@@ -2,47 +2,17 @@
 @use "../abstracts/variables" as *;
 
 .topbar {
-  background-color: $default-color;
-  color: $default-background;
+  background-color: $primary-color-1;
+  color: $white;
   padding: 10px 0;
 
-  a {
-    color: $default-background;
-  }
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__flex {
-    @include for-tablet-portrait-up {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    @include for-tablet-landscape-up {
-      gap: 40px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
   }
-
-  &__opening-hours {
-    @include for-tablet-portrait-up {
-      text-align: right;
-    }
-  }
-
-  &__opening-hours,
-  &__payments {
-    display: none;
-
-    @include for-tablet-portrait-up {
-      display: block;
-    }
-  }
-
 }
 
 .header {
@@ -118,7 +88,7 @@
   top: 0;
   left: 0;
   z-index: 90;
-  background-color: $default-background;
+  background-color: $white;
   opacity: 0;
   visibility: hidden;
   width: 100vw;
@@ -141,7 +111,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: $default-background;
+  background-color: $white;
   width: 100%;
   transform-origin: 0% 0%;
   transform: translate(-150%, 0);
@@ -163,14 +133,14 @@
     display: block;
     padding: 15px 0;
     text-transform: uppercase;
-    border-bottom: 1px solid $text-color-1;
+    border-bottom: 1px solid $primary-color-1;
 
     @include for-tablet-landscape-up {
-      border-bottom: 1px solid $default-background;
+      border-bottom: 1px solid $white;
       transition: border-bottom-color .3s;
 
       &:hover {
-        border-bottom: 1px solid $text-color-1;
+        border-bottom: 1px solid $primary-color-1;
       }
     }
   }

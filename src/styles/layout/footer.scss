@@ -3,7 +3,7 @@
 
 .footer {
   padding-top: 20px;
-  background-color: $default-color;
+  background-color: $black;
 
   @include for-tablet-portrait-up {
     padding-top: 60px;
@@ -39,7 +39,7 @@
     p {
       font-size: 1.2rem;
       line-height: 1.8rem;
-      color: $default-background;
+      color: $white;
     }
   }
 }

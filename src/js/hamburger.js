@@ -5,6 +5,7 @@ const menu = document.querySelector("#primary-menu");
 if (hamburger && background && menu) {
   hamburger.addEventListener("click", () => {
     console.log("clicked")
+    hamburger.classList.toggle("fa-times")
     background.classList.toggle("menu-background--active")
     menu.classList.toggle("primary-menu--active")
   })

@@ -1,14 +1,13 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 h1,
@@ -22,10 +21,9 @@ h4,
 h5,
 .h5,
 h6,
-.h6,
-p {
+.h6 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h1,
@@ -105,7 +103,7 @@ a {
   font-size: 1.4rem;
   line-height: 2.1rem;
   text-decoration: none;
-  color: $default-color;
+  color: $black;
 }
 
 .bold {

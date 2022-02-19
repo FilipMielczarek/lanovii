@@ -15,29 +15,17 @@
 <div class="menu-background"></div>
 <header class="header">
     <div class="topbar">
-        <div class="container large-container">
+        <div class="container">
             <div class="topbar__wrapper">
                 <?php $topbar = get_field("topbar", "options"); ?>
                 <div class="topbar__flex">
-                    <div class="topbar__write-to-us">
-                        <?php $write_to_us = $topbar['write_to_us']; ?>
-                        <a href='<?= $write_to_us['url']; ?>' class="bold"
-                           aria-label="Napisz do nas"><?= $write_to_us['title'] ?></a>
+                    <div class="topbar__telephone-number">
+                        <?php $telephone_number = $topbar['telephone_number']; ?>
+                        <?= $telephone_number; ?>
                     </div>
-                    <div class="topbar__opening-hours">
-                        <?php $opening_hours = $topbar['opening_hours']; ?>
-                        <p class="p-14"><?= $opening_hours; ?></p>
-                    </div>
-                </div>
-                <div class="topbar__flex">
-                    <div class="topbar__payments">
-                        <?php $payments = $topbar['payments']; ?>
-                        <p class="p-14"><?= $payments; ?></p>
-                    </div>
-                    <div class="topbar__log-in">
-                        <?php $log_in = $topbar['log_in']; ?>
-                        <a href='<?= $log_in['url']; ?>' class="bold"
-                           aria-label="Zaloguj się"><?= $log_in['title'] ?></a>
+                    <div class="topbar__email">
+                        <?php $email = $topbar['email']; ?>
+                        <?= $email; ?>
                     </div>
                 </div>
             </div>
