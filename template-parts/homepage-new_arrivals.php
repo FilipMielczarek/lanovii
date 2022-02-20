@@ -6,7 +6,7 @@
                 <?php $heading = $new_arrivals['heading']; ?>
                 <h2><?= $heading; ?></h2>
             </div>
-            <div class="new-arrivals__products">
+            <div class="new-arrivals__products small-margin">
                 <?php $shortcode = $new_arrivals['shortcode']; ?>
                 <?= $shortcode; ?>
             </div>

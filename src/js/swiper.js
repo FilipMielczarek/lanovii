@@ -27,8 +27,6 @@ if (inspirationsSwiper) {
       768: {
         slidesPerView: 2,
         spaceBetween: 30,
-        slidesOffsetBefore: 75,
-        slidesOffsetAfter: 75,
       },
     }
   });

@@ -30,13 +30,9 @@ main {
 }
 
 .standard-margins {
-  margin-top: 20px;
+  margin-top: 40px;
 
   @include for-tablet-portrait-up {
-    margin-top: 40px;
-  }
-
-  @include for-tablet-landscape-up {
     margin-top: 60px;
   }
 
@@ -46,8 +42,9 @@ main {
 }
 
 .small-margin {
-  margin-top: 40px;
-}
+  margin-top: 20px;
 
-// Margins
-// 20 > 40 > 60
+  @include for-tablet-portrait-up {
+    margin-top: 40px;
+  }
+}

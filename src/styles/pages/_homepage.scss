@@ -105,9 +105,7 @@
 
 .inspirations {
   &__wrapper {
-    padding: 30px;
     text-align: center;
-    background-color: $black;
   }
 
   &__heading h1 {
@@ -119,25 +117,25 @@
     margin-bottom: 30px;
 
     h2 {
-      color: $white;
+      color: $primary-color-2;
     }
   }
 
   &__swiper {
     &__slide {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      justify-content: center;
-
       img {
+        width: 100%;
         max-width: 500px;
         height: auto;
         object-fit: cover;
       }
 
       &__button {
-        margin: 15px 0 7px 0;
+        margin: 20px 0 7px 0;
+
+        @include for-tablet-portrait-up {
+          margin: 30px 0 7px 0;
+        }
 
         a {
           padding: 10px 40px;
@@ -148,6 +146,14 @@
           border-radius: 8px;
         }
       }
+    }
+
+    &__next {
+      right: 5px !important;
+    }
+
+    &__prev {
+      left: 5px !important;
     }
 
     &__next,
@@ -163,7 +169,6 @@
   &__heading {
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 30px;
   }
 }
 
