@@ -21,3 +21,26 @@
     background-color: $primary-color-1;
   }
 }
+
+.feedback,
+.posted_in,
+bdi,
+.woocommerce .quantity .qty,
+#order_review > table {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+.woocommerce span.onsale {
+  background-color: $primary-color-1;
+}
+
+.summary.entry-summary > p > del > span,
+.summary.entry-summary > p > del > span > bdi,
+.woocommerce div.product p.price {
+  color: $primary-color-1;
+}
+
+.nav-links {
+  display: none;
+}

@@ -44,7 +44,8 @@
                    class="header__social">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href='<?= $facebook['url']; ?>' aria-label="Facebook La`Novii" rel="noopener noreferrer" class="header__social">
+                <a href='<?= $facebook['url']; ?>' aria-label="Facebook La`Novii" rel="noopener noreferrer"
+                   class="header__social">
                     <i class="fab fa-facebook-f"></i>
                 </a>
             </div>

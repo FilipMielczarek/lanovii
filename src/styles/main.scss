@@ -5,10 +5,9 @@
 
 @use "./layout/footer";
 @use "./layout/header";
+@use "./layout/wishlist";
 @use "./layout/woocommerce";
 
 @use "./pages/homepage";
 
 @use "./themes/theme";
-
-@use "./vendors/normalize";
