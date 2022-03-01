@@ -141,6 +141,18 @@
   transform: translate(-150%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 
+  li:hover {
+    .sub-menu {
+      display: block;
+    }
+  }
+
+  li > a:not(:only-child):after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: " \f078";
+  }
+
   &--active {
     transform: none;
   }
@@ -168,4 +180,12 @@
       }
     }
   }
+}
+
+.sub-menu {
+  background-color: $white;
+  position: absolute;
+  display: none;
+  list-style: none;
+  padding: 10px;
 }
