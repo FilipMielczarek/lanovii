@@ -1,13 +1,13 @@
-@use "./base/typography";
+@use './base/typography';
 
-@use "./components/accordion";
-@use "./components/buttons";
+@use './components/accordion';
+@use './components/buttons';
 
-@use "./layout/footer";
-@use "./layout/header";
-@use "./layout/wishlist";
-@use "./layout/woocommerce";
+@use './layout/footer';
+@use './layout/header';
+@use './layout/wishlist';
+@use './layout/woocommerce';
 
-@use "./pages/homepage";
+@use './pages/homepage';
 
-@use "./themes/theme";
+@use './themes/theme';

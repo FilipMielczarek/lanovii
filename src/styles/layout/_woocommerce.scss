@@ -1,5 +1,5 @@
-@use "../abstracts/mixins" as *;
-@use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 
 .category-pick__products {
   .woocommerce {
@@ -29,11 +29,16 @@ bdi,
 #order_review > table,
 #shipping_method,
 .woocommerce-info,
-ul.payment_methods li[class*=payment_method] > input[name=payment_method] + label,
+ul.payment_methods
+  li[class*='payment_method']
+  > input[name='payment_method']
+  + label,
 .woocommerce .woocommerce-order-details,
 .woocommerce .woocommerce-customer-details address,
 .woocommerce div.product form.cart .variations,
-.woocommerce-error, .woocommerce-info, .woocommerce-message,
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message,
 .woocommerce nav.woocommerce-pagination ul {
   font-size: 1.4rem;
   line-height: 2rem;
@@ -104,12 +109,16 @@ ul.payment_methods li[class*=payment_method] > input[name=payment_method] + labe
   background-color: transparent;
 }
 
-#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box {
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
   background-color: $primary-color-1;
   color: $white;
 }
 
-#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box::before {
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box::before {
   border: 1em solid $primary-color-1;
   border-right-color: transparent;
   border-left-color: transparent;
@@ -168,7 +177,7 @@ ul.payment_methods li[class*=payment_method] > input[name=payment_method] + labe
     border-bottom: 1px solid $primary-color-1;
 
     @include for-tablet-landscape-up {
-      transition: border-bottom-color .3s;
+      transition: border-bottom-color 0.3s;
     }
   }
 }

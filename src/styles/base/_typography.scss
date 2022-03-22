@@ -1,5 +1,5 @@
-@use "../abstracts/mixins" as *;
-@use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
@@ -12,17 +12,11 @@ body {
 }
 
 h1,
-.h1,
 h2,
-.h2,
 h3,
-.h3,
 h4,
-.h4,
 h5,
-.h5,
-h6,
-.h6 {
+h6 {
   margin: 0;
   font-weight: 600;
 }
@@ -80,7 +74,7 @@ h6,
   }
 
   h4 {
-    font-size: (1.4* 0.8) * 1rem;
+    font-size: (1.4 * 0.8) * 1rem;
     line-height: (2 * 0.8) * 1rem;
   }
 

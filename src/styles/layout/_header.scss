@@ -1,5 +1,5 @@
-@use "../abstracts/mixins" as *;
-@use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 
 .topbar {
   background-color: $primary-color-1;
@@ -94,7 +94,7 @@
       margin-bottom: 20px;
       opacity: 0;
       visibility: hidden;
-      transition: all .3s;
+      transition: all 0.3s;
     }
   }
 
@@ -117,7 +117,7 @@
   visibility: hidden;
   width: 100vw;
   height: 100vh;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &--active {
     opacity: 1;
@@ -139,7 +139,7 @@
   width: 100%;
   transform-origin: 0% 0%;
   transform: translate(-150%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 
   li:hover {
     .sub-menu {
@@ -148,9 +148,9 @@
   }
 
   li > a:not(:only-child):after {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    content: " \f078";
+    content: ' \f078';
   }
 
   &--active {
@@ -173,7 +173,7 @@
 
     @include for-tablet-landscape-up {
       border-bottom: 1px solid $white;
-      transition: border-bottom-color .3s;
+      transition: border-bottom-color 0.3s;
 
       &:hover {
         border-bottom: 1px solid $primary-color-1;

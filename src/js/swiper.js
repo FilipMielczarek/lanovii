@@ -1,11 +1,11 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
-import 'swiper/css/navigation'
+import 'swiper/css/navigation';
 
-const homepageSwiper = document.querySelector(".banner__swiper");
+const homepageSwiper = document.querySelector('.banner__swiper');
 
 if (homepageSwiper) {
-  const swiper = new Swiper(".banner__swiper", {
+  const swiper = new Swiper('.banner__swiper', {
     loop: true,
     autoplay: {
       delay: 5000,
@@ -13,14 +13,13 @@ if (homepageSwiper) {
   });
 }
 
-
-const inspirationsSwiper = document.querySelector(".inspirations__swiper");
+const inspirationsSwiper = document.querySelector('.inspirations__swiper');
 
 if (inspirationsSwiper) {
-  const swiper = new Swiper(".inspirations__swiper", {
+  const swiper = new Swiper('.inspirations__swiper', {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     slidesPerView: 1,
     breakpoints: {
@@ -28,6 +27,6 @@ if (inspirationsSwiper) {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-    }
+    },
   });
 }
