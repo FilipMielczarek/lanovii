@@ -1,0 +1,43 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.page-not-found {
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 20px;
+
+    h1 {
+      color: $primary-color-1;
+    }
+  }
+
+  &__subheading {
+    margin-bottom: 20px;
+
+    h2 {
+      color: $primary-color-2;
+    }
+  }
+
+  &__go-back {
+    a {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: $white;
+      color: $primary-color-1;
+      border: 2px solid $primary-color-1;
+      border-radius: 8px;
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-color-1;
+        color: $white;
+      }
+    }
+  }
+}

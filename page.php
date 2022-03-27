@@ -15,7 +15,7 @@
     get_header();
 ?>
 
-    <main id="primary" class="site-main standard-margins">
+    <div id="primary" class="site-main standard-margins">
         <div class="container">
             <?php
                 while (have_posts()) :
@@ -31,7 +31,7 @@
                 endwhile; // End of the loop.
             ?>
         </div>
-    </main><!-- #main -->
+    </div><!-- #main -->
 
 <?php
     get_footer();
