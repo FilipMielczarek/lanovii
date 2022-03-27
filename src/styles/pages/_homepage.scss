@@ -123,48 +123,48 @@
     }
   }
 
-  &__swiper {
-    &__slide {
-      img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        object-fit: cover;
-      }
-
-      &__button {
-        margin: 20px 0 7px 0;
-
-        @include for-tablet-portrait-up {
-          margin: 30px 0 7px 0;
-        }
-
-        a {
-          padding: 10px 40px;
-          background-color: $primary-color-1;
-          color: $white;
-          font-weight: 600;
-          text-transform: uppercase;
-          border-radius: 8px;
-        }
-      }
-    }
-
-    &__next {
-      right: 5px !important;
-    }
-
-    &__prev {
-      left: 5px !important;
-    }
-
-    &__next,
-    &__prev {
-      &::after {
-        color: $primary-color-1;
-      }
-    }
-  }
+  //&__swiper {
+  //  &__slide {
+  //    img {
+  //      width: 100%;
+  //      max-width: 500px;
+  //      height: auto;
+  //      object-fit: cover;
+  //    }
+  //
+  //    &__button {
+  //      margin: 20px 0 7px 0;
+  //
+  //      @include for-tablet-portrait-up {
+  //        margin: 30px 0 7px 0;
+  //      }
+  //
+  //      a {
+  //        padding: 10px 40px;
+  //        background-color: $primary-color-1;
+  //        color: $white;
+  //        font-weight: 600;
+  //        text-transform: uppercase;
+  //        border-radius: 8px;
+  //      }
+  //    }
+  //  }
+  //
+  //  &__next {
+  //    right: 5px !important;
+  //  }
+  //
+  //  &__prev {
+  //    left: 5px !important;
+  //  }
+  //
+  //  &__next,
+  //  &__prev {
+  //    &::after {
+  //      color: $primary-color-1;
+  //    }
+  //  }
+  //}
 }
 
 .new-arrivals {
@@ -274,5 +274,17 @@
 .about-us {
   &__heading h4 {
     color: $primary-color-1;
+  }
+}
+
+.localisation {
+  margin-bottom: -40px;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: -60px;
+  }
+
+  @include for-desktop-up {
+    margin-bottom: -80px;
   }
 }
