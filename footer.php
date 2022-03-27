@@ -30,12 +30,11 @@
                     <?= $third_section; ?>
                 </div>
             </div>
-            <div class="footer__single-section">
+            <div class="footer__single-section footer__fourth-section">
                 <?php $fourth_section_title = $footer_sections['fourth_section_title'];
                     $fourth_section = $footer_sections['fourth_section']; ?>
-                <button class="accordion"><span class="accordion-footer-title"><?= $fourth_section_title; ?></span>
-                </button>
-                <div class="panel footer__social-media">
+                <span class="accordion-footer-title"><?= $fourth_section_title; ?></span>
+                <div class="footer__social-media">
                     <?= $fourth_section; ?>
                 </div>
             </div>

@@ -16,6 +16,15 @@
     }
   }
 
+  &__fourth-section {
+    padding: 10px;
+
+    span {
+      color: $primary-color-1;
+      font-size: 1.5rem;
+    }
+  }
+
   &__social-media {
     p {
       display: flex;
@@ -25,6 +34,7 @@
 
     i {
       font-size: 24px;
+      color: $white;
     }
   }
 
