@@ -14,19 +14,13 @@
 <?php wp_body_open(); ?>
 <div class="menu-background"></div>
 <header class="header">
-    <div class="topbar">
+    <div class="top-bar">
         <div class="container">
-            <div class="topbar__wrapper">
-                <?php $topbar = get_field("topbar", "options"); ?>
-                <div class="topbar__flex">
-                    <div class="topbar__telephone-number">
-                        <?php $telephone_number = $topbar['telephone_number']; ?>
-                        <?= $telephone_number; ?>
-                    </div>
-                    <div class="topbar__email">
-                        <?php $email = $topbar['email']; ?>
-                        <?= $email; ?>
-                    </div>
+            <div class="top-bar__wrapper">
+                <?php $topbar = get_field("topbar", "options");
+                    $information = $topbar['topbar_information']; ?>
+                <div class="top-bar__inforamtion">
+                    <?= $information; ?>
                 </div>
             </div>
         </div>

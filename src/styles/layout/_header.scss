@@ -1,28 +1,13 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
-.topbar {
+.top-bar {
   background-color: $primary-color-1;
   color: $white;
-  padding: 10px 0;
+  padding: 15px 0;
 
-  &__flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-
-    @include for-tablet-portrait-up {
-      justify-content: flex-start;
-    }
-
-    & > * {
-      flex: 1;
-
-      @include for-tablet-portrait-up {
-        flex: none;
-      }
-    }
+  p {
+    margin: 0;
   }
 }
 
@@ -66,11 +51,15 @@
   }
 
   &__logo {
-    img {
-      width: 100%;
-      height: auto;
-      max-height: 50px;
-      object-fit: cover;
+    a {
+      display: flex;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 65px;
+        object-fit: cover;
+      }
     }
   }
 
