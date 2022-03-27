@@ -1,4 +1,4 @@
-<section class="category-pick standard-margins">
+<section class="category-pick">
     <div class="container">
         <?php $homepage_category_switcher = get_field('homepage_category_switcher');
             $first_category = $homepage_category_switcher['first_category'];

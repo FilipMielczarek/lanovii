@@ -2,15 +2,7 @@
 @use '../abstracts/variables' as *;
 
 .banner {
-  margin-top: 20px;
-
-  @include for-tablet-portrait-up {
-    margin-top: 40px;
-  }
-
-  @include for-tablet-landscape-up {
-    margin-top: 130px;
-  }
+  margin-top: 40px;
 
   .swiper {
     width: 100%;
@@ -59,6 +51,16 @@
 }
 
 .category-pick {
+  margin-top: 20px;
+
+  @include for-tablet-portrait-up {
+    margin-top: 40px;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-top: 130px;
+  }
+
   &__choices {
     display: flex;
     justify-content: space-around;
