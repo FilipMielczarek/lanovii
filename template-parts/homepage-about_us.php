@@ -7,7 +7,7 @@
         </div>
         <div class="about-us__content">
             <?php $content = $homepage_about_us['content']; ?>
-            <h4 class="h2"><?= $content; ?></h4>
+            <p><?= $content; ?></p>
         </div>
     </div>
 </section>

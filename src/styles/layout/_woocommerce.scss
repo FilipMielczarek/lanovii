@@ -30,16 +30,19 @@ bdi,
 #shipping_method,
 .woocommerce-info,
 ul.payment_methods
-  li[class*='payment_method']
-  > input[name='payment_method']
-  + label,
+li[class*='payment_method']
+> input[name='payment_method']
++ label,
 .woocommerce .woocommerce-order-details,
 .woocommerce .woocommerce-customer-details address,
 .woocommerce div.product form.cart .variations,
 .woocommerce-error,
 .woocommerce-info,
 .woocommerce-message,
-.woocommerce nav.woocommerce-pagination ul {
+.woocommerce nav.woocommerce-pagination ul,
+.woocommerce table.my_account_orders td,
+.woocommerce table.my_account_orders th,
+.woocommerce-Address > address {
   font-size: 1.4rem;
   line-height: 2rem;
 }
@@ -102,6 +105,15 @@ ul.payment_methods
     &:focus {
       border: 1px solid $primary-color-1;
     }
+  }
+}
+
+.woocommerce form .form-row input.input-text {
+  padding: 10px;
+  border: 1px solid $primary-color-2;
+
+  &:focus {
+    border: 1px solid $primary-color-1;
   }
 }
 
@@ -181,3 +193,4 @@ ul.payment_methods
     }
   }
 }
+
