@@ -1,5 +1,5 @@
 <section class="banner">
-     <div class="container">
+    <div class="container">
         <div class="swiper banner__swiper">
             <div class="swiper-wrapper">
                 <?php $banner = get_field('homepage_banner');
