@@ -1,7 +1,7 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 html {
   font-size: 62.5%;
@@ -105,7 +105,13 @@ a {
   font-weight: 600;
 }
 
-.p-14 {
+.p-14,
+bdi {
   font-size: 1.4rem;
   line-height: 2.1rem;
+}
+
+small {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }

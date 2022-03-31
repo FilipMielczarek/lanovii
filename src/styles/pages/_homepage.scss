@@ -244,6 +244,12 @@
           padding: 11px 0;
           letter-spacing: 2px;
           font-size: 1.6rem;
+          cursor: pointer;
+          transition: 0.3s background-color;
+
+          &:hover {
+            background-color: $primary-color-1-dark;
+          }
         }
       }
 
