@@ -19,8 +19,15 @@ bdi,
   color: $primary-color-1;
 }
 
-.woocommerce span.onsale {
+.woocommerce span.onsale,
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce nav.woocommerce-pagination ul li a:hover {
   background-color: $primary-color-1;
+}
+
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce nav.woocommerce-pagination ul li a:hover {
+  color: $white;
 }
 
 .woocommerce .quantity .qty,
@@ -39,7 +46,8 @@ ul.payment_methods li,
 .woocommerce .woocommerce-ordering select,
 .woocommerce-Address > address,
 legend,
-.woocommerce .woocommerce-customer-details address {
+.woocommerce .woocommerce-customer-details address,
+.woocommerce nav.woocommerce-pagination ul {
   font-size: 1.4rem;
   line-height: 2rem;
 }
@@ -206,6 +214,11 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
     outline: none;
     border: 1px solid $primary-color-1;
   }
+}
+
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+  padding: 10px;
 }
 
 #coupon_code {

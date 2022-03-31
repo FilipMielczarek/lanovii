@@ -1,0 +1,22 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.page-header__search {
+  margin-top: 40px;
+}
+
+.product-search {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+
+  @include for-tablet-portrait-up {
+    gap: 25px;
+  }
+
+  @include for-tablet-landscape-up {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 48px;
+  }
+}
