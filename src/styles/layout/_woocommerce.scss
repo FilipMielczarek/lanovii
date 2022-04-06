@@ -5,8 +5,27 @@
 /************* FONTS AND COLORS ****************/
 /**********************************************/
 
+.woocommerce .woocommerce-breadcrumb {
+  margin-top: 28px;
+  padding: 15px;
+  background-color: $primary-color-1;
+  color: $white;
+  font-weight: 400;
+
+  @include for-tablet-landscape-up {
+    margin-top: 98px;
+  }
+
+  a {
+    color: $white;
+    font-weight: 600;
+  }
+}
+
 bdi {
   font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
 }
 
 bdi,
@@ -32,7 +51,6 @@ bdi,
 
 .woocommerce .quantity .qty,
 .product_meta > span,
-.woocommerce-message,
 #coupon_code,
 .woocommerce-error,
 .cart-subtotal,
@@ -47,7 +65,8 @@ ul.payment_methods li,
 .woocommerce-Address > address,
 legend,
 .woocommerce .woocommerce-customer-details address,
-.woocommerce nav.woocommerce-pagination ul {
+.woocommerce nav.woocommerce-pagination ul,
+.woocommerce .woocommerce-breadcrumb {
   font-size: 1.4rem;
   line-height: 2rem;
 }
@@ -61,6 +80,7 @@ legend,
 }
 
 .woocommerce-privacy-policy-link,
+.woocommerce-message,
 .woocommerce-LostPassword.lost_password > a {
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -92,8 +112,9 @@ legend,
 a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
 .woocommerce button.button.alt,
 .woocommerce a.button,
+.woocommerce #respond input#submit,
 .woocommerce button.button,
-.woocommerce #respond input#submit {
+.woocommerce button.button.alt.disabled {
   background-color: $white;
   color: $primary-color-1;
   border: 1px solid $primary-color-1;

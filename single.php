@@ -12,6 +12,7 @@
 
     <div id="primary" class="site-main standard-margins">
         <div class="container">
+            <?php woocommerce_breadcrumb(); ?>
             <?php
                 while (have_posts()) :
                     the_post();
