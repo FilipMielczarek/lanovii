@@ -284,3 +284,21 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
     margin-top: -10px;
   }
 }
+
+/************************************************/
+/**************** PRODUCT PAGE *****************/
+/**********************************************/
+
+#tab-description,
+#tab-reviews {
+  display: block !important;
+  color: $black;
+
+  p, span, a {
+    color: $black;
+  }
+}
+
+.product_meta {
+  display: none;
+}
