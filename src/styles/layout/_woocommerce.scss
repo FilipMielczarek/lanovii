@@ -452,21 +452,6 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
   color: $primary-color-1;
 }
 
-//#respond {
-//  display: flex;
-//  justify-content: center;
-//  gap: 20px;
-//}
-//
-//#commentform {
-//  display: flex;
-//  gap: 20px;
-//}
-//
-//.comment-form-comment {
-//  display: flex;
-//}
-
 #reply-title {
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -486,4 +471,13 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
     outline: none;
     border: 1px solid $primary-color-1;
   }
+}
+
+
+/************************************************/
+/**************** PRODUCT PAGE *****************/
+/**********************************************/
+
+.woocommerce table.shop_table {
+  border-top: none !important;
 }
