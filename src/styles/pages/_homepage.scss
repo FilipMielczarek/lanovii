@@ -280,8 +280,8 @@
     margin-bottom: -60px;
   }
 
-  @include for-desktop-up {
-    margin-bottom: -80px;
+  @include for-tablet-landscape-up {
+    margin-bottom: -123px;
   }
 }
 

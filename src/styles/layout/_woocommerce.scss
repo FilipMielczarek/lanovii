@@ -473,9 +473,17 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
   }
 }
 
+.slick-slide.slick-current.slick-active > a {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.wpgs-for .slick-arrow::before {
+  color: $primary-color-1 !important;
+}
 
 /************************************************/
-/**************** PRODUCT PAGE *****************/
+/****************** WISHLIST *******************/
 /**********************************************/
 
 .woocommerce table.shop_table {
