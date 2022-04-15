@@ -82,4 +82,3 @@
         </nav>
     </div>
 </header>
-<main class="main">

@@ -60,10 +60,28 @@
             do_action('woocommerce_single_product_summary');
         ?>
 
-        <?php $test = get_field('test'); ?>
-        <div class="qwer">
-            <p><?= $test; ?></p>
-        </div>
+        <?php $size_chart = get_field('size_chart');
+            $heading = $size_chart['heading'];
+            if ($heading): ?>
+                <div class="size-chart">
+                    <div class="size-chart__wrapper">
+                        <div class="size-chart__heading">
+                            <p><?= $heading; ?></p>
+                        </div>
+                        <?php $single_size_chart = $size_chart['single_size_chart'];
+                            if ($single_size_chart):
+                                foreach ($single_size_chart as $item):
+                                    $left_column = $item['left_column'];
+                                    $right_column = $item['right_column']; ?>
+                                    <div class="size-chart__row">
+                                            <span><?= $left_column; ?></span>
+                                            <span><?= $right_column; ?></span>
+                                    </div>
+                                <?php endforeach;
+                            endif; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
     </div>
 
     <?php

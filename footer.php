@@ -1,4 +1,3 @@
-</main>
 <footer class="footer standard-margins">
     <div class="container">
         <div class="footer__wrapper">

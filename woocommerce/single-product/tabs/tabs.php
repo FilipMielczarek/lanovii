@@ -48,7 +48,3 @@
         </div>
 
     <?php endif; ?>
-
-<div class="p">
-    <p>qwer</p>
-</div>
