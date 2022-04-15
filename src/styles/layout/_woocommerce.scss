@@ -160,6 +160,7 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
 /************************************************/
 /******************* INPUT *********************/
 /**********************************************/
+
 .woocommerce .quantity .qty {
   height: 34px;
 }
@@ -186,6 +187,7 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
 /************************************************/
 /******************** LISTS ********************/
 /**********************************************/
+
 .woocommerce-MyAccount-navigation ul {
   margin: 0;
   padding: 0;
@@ -206,6 +208,7 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
 /************************************************/
 /******************* MARGINS *******************/
 /**********************************************/
+
 .woocommerce ul.order_details {
   padding: 0;
   margin-top: 42px;
@@ -249,6 +252,7 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
 /************************************************/
 /**************** DISPLAY FIXES ****************/
 /**********************************************/
+
 .coupon {
   display: flex;
 }
@@ -270,6 +274,7 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
 /************************************************/
 /*************** POSITION FIXES ****************/
 /**********************************************/
+
 .woocommerce form .show-password-input,
 .woocommerce-page form .show-password-input {
   top: 7px;
@@ -294,7 +299,9 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
   display: block !important;
   color: $black;
 
-  p, span, a {
+  p,
+  span,
+  a {
     color: $black;
   }
 }
