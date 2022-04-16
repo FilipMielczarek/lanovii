@@ -296,3 +296,9 @@
 .star-rating span::before {
   color: $primary-color-1 !important;
 }
+
+.primary-menu li:hover .sub-menu {
+  @include for-phone-only {
+    width: 100%;
+  }
+}

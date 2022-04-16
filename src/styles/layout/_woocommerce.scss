@@ -482,6 +482,49 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
   color: $primary-color-1 !important;
 }
 
+.woocommerce-noreviews {
+  font-size: 1.6rem !important;
+  line-height: 2.2rem !important;
+  margin: 5px 0;
+}
+
+.size-chart-extended {
+  margin-bottom: 40px;
+
+  &__heading {
+    margin-bottom: 10px;
+  }
+
+  &__table {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $primary-color-1;
+
+    table {
+      td {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+@include for-phone-only {
+  #tab-description,
+  #tab-reviews {
+    overflow: initial;
+    max-height: 100%;
+
+    &::after {
+      display: none !important;
+    }
+  }
+}
+
+.woocommerce div.product form.cart .reset_variations {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
 /************************************************/
 /****************** WISHLIST *******************/
 /**********************************************/

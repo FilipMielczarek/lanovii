@@ -31,6 +31,19 @@
     if (!empty($product_tabs)) : ?>
 
         <div class="woocommerce-tabs wc-tabs-wrapper">
+            <?php $size_chart_ext = get_field('size_chart_ext');
+                $heading = $size_chart_ext['heading'];
+                if ($heading): ?>
+                    <div class="size-chart-extended">
+                        <div class="size-chart-extended__heading">
+                            <h2><?= $heading; ?></h2>
+                        </div>
+                        <div class="size-chart-extended__table">
+                            <?php $shortcode = $size_chart_ext['shortcode']; ?>
+                            <?= $shortcode; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
             <?php foreach ($product_tabs as $key => $product_tab) : ?>
                 <div
                     class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr($key); ?> panel entry-content wc-tab active"
