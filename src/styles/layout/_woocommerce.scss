@@ -525,6 +525,29 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
   line-height: 2rem;
 }
 
+#select-point {
+  padding: 8px;
+  background-color: $primary-color-1;
+  color: $white;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color .3s;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $primary-color-1-dark;
+  }
+}
+
+.woocommerce ul#shipping_method li label {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.woocommerce ul#shipping_method li input {
+  margin: 10px 5px 0 0;
+}
+
 /************************************************/
 /****************** WISHLIST *******************/
 /**********************************************/
