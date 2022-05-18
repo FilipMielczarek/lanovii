@@ -7,5 +7,6 @@ La`Novii is a theme for WooCommerce based on the design I received. The base tem
 - PHP, WordPress, WooCommerce
 - ACF, Contact Form, FooGallery, Product Gallery Slider for WooCommerce
 - Webpack
+- Third party libraries ([Swiper](https://swiperjs.com/), [Highcharts](https://www.highcharts.com/))
 
 ## I will attach a screenshot after adding products.
