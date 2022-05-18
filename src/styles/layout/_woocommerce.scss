@@ -66,7 +66,9 @@ ul.payment_methods li,
 legend,
 .woocommerce .woocommerce-customer-details address,
 .woocommerce nav.woocommerce-pagination ul,
-.woocommerce .woocommerce-breadcrumb {
+.woocommerce .woocommerce-breadcrumb,
+.wishlist-fragment.on-first-load > div > span,
+.feedback {
   font-size: 1.4rem;
   line-height: 2rem;
 }
@@ -554,4 +556,8 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
 
 .woocommerce table.shop_table {
   border-top: none !important;
+}
+
+.woocommerce a.remove:hover {
+  background-color: $primary-color-1;
 }
