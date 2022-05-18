@@ -1,0 +1,61 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+#product-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+
+  @include for-tablet-portrait-up {
+    gap: 30px;
+  }
+
+  .widget-title {
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  #woocommerce_price_filter-4 {
+    @include for-phone-only {
+      width: 100%;
+    }
+
+    @include for-tablet-portrait-up {
+      width: 35%;
+    }
+
+    .price_slider_amount {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .button {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+
+      .price_label {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+  background-color: $primary-color-1;
+}
+
+.select2-results__option[aria-selected], .select2-results__option[data-selected],
+.select2-selection__placeholder,
+.select2-selection__rendered {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.select2-selection__clear {
+  font-size: 2rem;
+  margin-left: 5px;
+}
