@@ -1,7 +1,7 @@
 <?php
 
     if (!defined('_S_VERSION')) {
-        define('_S_VERSION', '1.0.1');
+        define('_S_VERSION', '1.1.0');
     }
 
     function lanovii_setup()
