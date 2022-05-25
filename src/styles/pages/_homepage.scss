@@ -190,7 +190,7 @@
     &__heading {
       margin-bottom: 5px;
 
-      h3 {
+      h5 {
         color: $primary-color-1;
       }
     }
@@ -198,7 +198,7 @@
     &__subheading {
       margin-bottom: 15px;
 
-      h3 {
+      h5 {
         color: $primary-color-2;
       }
     }
@@ -268,8 +268,12 @@
 }
 
 .about-us {
-  &__heading h4 {
-    color: $primary-color-1;
+  &__heading {
+    margin-bottom: 16px;
+
+    h4 {
+      color: $primary-color-1;
+    }
   }
 }
 
