@@ -1,8 +1,20 @@
 <?php
 
     if (!defined('_S_VERSION')) {
-        define('_S_VERSION', '1.2');
+        define('_S_VERSION', '1.0.6');
     }
+
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wp_generator');
+    remove_action('wp_head', 'feed_links', 2);
+    remove_action('wp_head', 'feed_links_extra', 3);
+    remove_action('wp_head', 'index_rel_link');
+    remove_action('wp_head', 'wlwmanifest_link');
+    remove_action('wp_head', 'start_post_rel_link', 10, 0);
+    remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+    remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+    remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
     function lanovii_setup()
     {
@@ -166,4 +178,78 @@
         }
 
         return $author;
+    }
+
+    remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form');
+    add_action('woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form');
+
+    add_action('woocommerce_register_form', 'njengah_terms_and_conditions_to_registration', 20);
+    function njengah_terms_and_conditions_to_registration()
+    {
+        if (wc_get_page_id('terms') > 0 && is_account_page()) {
+            ?>
+            <p class="form-row terms wc-terms-and-conditions">
+                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                    <input type="checkbox"
+                           class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
+                           name="terms" <?php checked(apply_filters('woocommerce_terms_is_checked_default', isset($_POST['terms'])), true); ?>
+                           id="terms"/>
+                    <span><?php printf(__('Przeczytałem/am i akceptuję <a href="%s" target="_blank" class="woocommerce-terms-and-conditions-link">regulamin</a>', 'woocommerce'), esc_url(wc_get_page_permalink('terms'))); ?></span>
+                    <span class="required">*</span>
+                </label>
+                <input type="hidden" name="terms-field" value="1"/>
+            </p>
+            <?php
+        }
+    }
+
+    add_action('woocommerce_register_post', 'terms_and_conditions_validation', 20, 3);
+    function terms_and_conditions_validation($username, $email, $validation_errors)
+    {
+        if (!isset($_POST['terms']))
+            $validation_errors->add('terms_error', __('Proszę przeczytać i zaakceptować regulamin, aby kontynuować składanie zamówienia.', 'woocommerce'));
+        return $validation_errors;
+    }
+
+    add_action('woocommerce_after_order_notes', 'wpdesk_vat_field');
+    /**
+     * Pole NIP w zamówieniu
+     */
+    function wpdesk_vat_field($checkout)
+    {
+        echo '<div id="wpdesk_vat_field"><h3>' . __('Dane do Faktury') . '</h3>';
+
+        woocommerce_form_field('vat_number', array(
+            'type' => 'text',
+            'maxlength' => 10,
+            'class' => array('vat-number-field form-row-wide'),
+            'label' => __('NIP'),
+            'placeholder' => __('Wpisz NIP, aby otrzymać fakturę'),
+        ), $checkout->get_value('vat_number'));
+
+        echo '</div>';
+    }
+
+    add_action('woocommerce_checkout_update_order_meta', 'wpdesk_checkout_vat_number_update_order_meta');
+
+    function wpdesk_checkout_vat_number_update_order_meta($order_id)
+    {
+        if (!empty($_POST['vat_number'])) {
+            update_post_meta($order_id, '_vat_number', sanitize_text_field($_POST['vat_number']));
+        }
+    }
+
+    add_action('woocommerce_admin_order_data_after_billing_address', 'wpdesk_vat_number_display_admin_order_meta', 10, 1);
+
+    function wpdesk_vat_number_display_admin_order_meta($order)
+    {
+        echo '<p><strong>' . __('NIP', 'woocommerce') . ':</strong> ' . get_post_meta($order->id, '_vat_number', true) . '</p>';
+    }
+
+    add_filter('woocommerce_email_order_meta_keys', 'wpdesk_vat_number_display_email');
+
+    function wpdesk_vat_number_display_email($keys)
+    {
+        $keys['NIP'] = '_vat_number';
+        return $keys;
     }

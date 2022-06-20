@@ -34,7 +34,8 @@ bdi,
 .woocommerce-message::before,
 .wishlist-fragment.on-first-load > div > a > span,
 .woocommerce-privacy-policy-link,
-.woocommerce-LostPassword.lost_password > a {
+.woocommerce-LostPassword.lost_password > a,
+.woocommerce form .form-row .required {
   color: $primary-color-1;
 }
 
@@ -69,23 +70,26 @@ legend,
 .woocommerce .woocommerce-breadcrumb,
 .wishlist-fragment.on-first-load > div > span,
 .feedback {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.4rem !important;
+  line-height: 2rem !important;
 }
 
 .product-name,
 .product-price,
 .product-quantity,
 .product-subtotal {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1.2rem !important;
+  line-height: 1.8rem !important;
 }
 
 .woocommerce-privacy-policy-link,
 .woocommerce-message,
-.woocommerce-LostPassword.lost_password > a {
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+.woocommerce-LostPassword.lost_password > a,
+.woocommerce-terms-and-conditions-link,
+.woocommerce-notices-wrapper > ul > li,
+.woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout > ul > li {
+  font-size: 1.6rem !important;
+  line-height: 2.2rem !important;
 }
 
 .woocommerce-message {
