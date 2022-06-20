@@ -18,6 +18,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     justify-items: center;
     align-items: center;
     padding: 20px 0;
@@ -28,8 +29,13 @@
     align-items: center;
     gap: 15px;
 
-    @include for-tablet-landscape-up {
-      #hamburger {
+    #hamburger {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+
+      @include for-tablet-landscape-up {
         display: none;
       }
     }
@@ -45,8 +51,10 @@
 
   &__hamburger,
   &__menu {
-    i {
-      font-size: 20px;
+    img {
+      width: auto;
+      height: 20px;
+      object-fit: cover;
     }
   }
 
@@ -66,14 +74,12 @@
   &__menu {
     display: flex;
     gap: 15px;
+    align-items: center;
 
-    &__wishlist,
-    i.fa-search {
-      display: none;
-
-      @include for-tablet-portrait-up {
-        display: block;
-      }
+    a {
+      display: flex;
+      justify-items: center;
+      align-items: center;
     }
   }
 
@@ -137,9 +143,8 @@
   }
 
   li > a:not(:only-child):after {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: ' \f078';
+    margin-left: 5px;
+    content: "\203A";
   }
 
   &--active {
@@ -149,6 +154,7 @@
   @include for-tablet-landscape-up {
     transform: none;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 15px;
     margin-bottom: 60px;
@@ -177,4 +183,13 @@
   display: none;
   list-style: none;
   padding: 10px;
+}
+
+#header__menu__search {
+  display: none;
+
+  @include for-tablet-portrait-up {
+    display: block;
+    cursor: pointer;
+  }
 }

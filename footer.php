@@ -34,7 +34,19 @@
                     $fourth_section = $footer_sections['fourth_section']; ?>
                 <span class="accordion-footer-title"><?= $fourth_section_title; ?></span>
                 <div class="footer__social-media">
-                    <?= $fourth_section; ?>
+                    <?php if ($fourth_section):
+                        foreach ($fourth_section as $item):
+                            $single_icon = $item['single_icon'];
+                            $social_media_link = $item['social_media_link']; ?>
+                            <div class="footer__social-media__single">
+                                <a href='<?= $social_media_link['url']; ?>' rel="noreferrer noopener">
+                                    <?php if (!empty($single_icon)): ?>
+                                        <img src="<?= $single_icon['url']; ?>" alt="<?= $single_icon['alt']; ?>"/>
+                                    <?php endif; ?>
+                                </a>
+                            </div>
+                        <?php endforeach;
+                    endif; ?>
                 </div>
             </div>
         </div>

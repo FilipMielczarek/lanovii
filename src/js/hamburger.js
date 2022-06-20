@@ -4,7 +4,6 @@ const menu = document.querySelector('#primary-menu');
 
 if (hamburger && background && menu) {
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('fa-times');
     hamburger.setAttribute(
       'aria-expanded',
       hamburger.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
