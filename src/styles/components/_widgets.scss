@@ -1,7 +1,28 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
-#product-filters {
+#show-filters {
+  margin: 10px 0;
+  background-color: $primary-color-1;
+  color: $white;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s;
+  padding: 6px 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color-1-dark;
+  }
+}
+
+.widget-product-filters {
+  display: none;
+}
+
+.widget-product-filters--active {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;

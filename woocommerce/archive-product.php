@@ -46,9 +46,12 @@
 </header>
 
 <section class="all-products">
+    <div class="activate-sidebar">
+        <button id="show-filters">Pokaż filtry</button>
+    </div>
     <?php if (is_active_sidebar('sidebar-1')) : ?>
 
-        <aside id="product-filters" class="widget-area">
+        <aside id="product-filters" class="widget-product-filters">
             <?php dynamic_sidebar('sidebar-1'); ?>
         </aside>
 
