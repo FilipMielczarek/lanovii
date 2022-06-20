@@ -17,13 +17,13 @@
     margin-bottom: 10px;
   }
 
-  #block-3 {
+  .widget_block {
     @include for-phone-only {
       width: 100%;
     }
 
     @include for-tablet-portrait-up {
-      width: 35%;
+      width: auto;
     }
 
     .price_slider_amount {
@@ -44,61 +44,26 @@
   }
 }
 
-.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
-  background-color: $primary-color-1;
-}
-
-.select2-results__option[aria-selected], .select2-results__option[data-selected],
-.select2-selection__placeholder,
-.select2-selection__rendered {
+.wc-block-components-price-slider__controls
+  .wc-block-components-price-slider__amount.wc-block-components-price-slider__amount--min,
+.wc-block-components-price-slider__controls
+  .wc-block-components-price-slider__amount.wc-block-components-price-slider__amount--max {
+  border: none;
   font-size: 1.4rem;
   line-height: 2rem;
 }
 
-.select2-selection__clear {
-  font-size: 2rem;
-  margin-left: 5px;
-}
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-  font-size: 2rem;
-}
-
-.select2-container--default.select2-container--focus .select2-selection--multiple,
-.select2-container--default .select2-selection--single,
-.select2-selection--multiple {
-  border: 1px solid $primary-color-1 !important;
-}
-
-.select2-container--default,
-.select2-selection--single .select2-selection__placeholder,
-.select2-container--default, .select2-selection--multiple, .select2-selection__choice__remove,
-.select2-selection__rendered, .select2-selection__clear, .select2-search__field {
- color: $black !important;
-}
-
-.select2-selection__choice {
+.wc-block-attribute-filter .wc-block-attribute-filter-list {
   display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
-  border: none !important;
-  background-color: $white !important;
-}
-
-.woocommerce .woocommerce-widget-layered-nav-dropdown__submit {
-  background-color: $white;
-  color: $primary-color-1;
-  border: 1px solid $primary-color-1;
+.wc-block-components-checkbox-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
   font-size: 1.4rem;
-  font-weight: 500;
-  transition: 0.3s background-color, 0.3s color;
-  padding: 8px 14px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $primary-color-1;
-    color: $white;
-  }
+  line-height: 2rem;
 }

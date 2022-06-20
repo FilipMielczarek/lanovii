@@ -1,7 +1,7 @@
 <?php
 
     if (!defined('_S_VERSION')) {
-        define('_S_VERSION', '1.0.6');
+        define('_S_VERSION', '1.0.7');
     }
 
     remove_action('wp_head', 'rsd_link');
